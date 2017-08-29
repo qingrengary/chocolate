@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+	font-family: 'Lato', sans-serif; /*san serif is there in case no internet, it will fall back to sans if Lato is not found*/
+	line-height: 1.5;
+	margin:0;
+}
+
+header{
+
+	text-transform:uppercase; /*transform all word in header into uppercase*/
+	letter-spacing: 3px;
+	text-align: center;
+	color: white;
+	background-color: #a1c856;
+	background-image: url(../images/header-bg.jpg);
+	background-size: cover;/*it will stretch the image if not big enough to cover*/
+    background-position: center; /*can adjust by adding top center or top bottom etc*/
+    padding: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+a{
+   color:white;/* selecting all the a to change*/
+   text-decoration: none; /*to get rid of the underline at the link */
+  } 
+
+h1{
+	font-weight: 700; /*thickness of the letter. the code u write below will overwrite the top code if is referring to the same item!*/
+    
+}
+
+.container {  /*we put a . cos we want to use the class. then follow by the class name */
+    // border: 1px solid red;
+     width: 1000px;
+     margin: 0 auto; /* it mean margin-top: 0; margin-bottom:0; margin-left:auto; margin-right:auto; - auto is going to balance the remaining space*/
+
+	} 
+
+.recipes {
+
+ 	width:66.66%;
+    float:left;
+}
+
+.sidebar{
+	width:33.33%;
+	float:right;
+	background-color: orange;
+	padding: 20px;
+}
+
+article{
+
+	width:48%;
+	float:left;
+	margin-right: 2%;
+
+
+}
+
+article img {
+	width:100%;
+}
+
+footer{
+	clear:both;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: grey;
+	padding: 30px;
+}
+
+
+ul{  /*to reset the default padding. Alternative can just reset it*/
+	padding:0;
+}
+ul li{
+	display: inline;
+	margin: 5px;
+}
+
+@media(max-width:1000px){/*when it hit 1000px style is going to change--2 colum without About Us */
+   .sidebar {
+   	display:none; /*this will hide the whole of About Us*/
+   }
+
+
+.container, .recipes {
+	width:100%;
+    }
+
+@media(max-width:600px){  /*will only kick in when screen size hit 600 px-- 1colum only*/
+   article {
+   	width: 96%;
+   	margin: 0 2%; /*it will mean margin left and right 2% */
+   	float: none;
+   }
+
+
+
+
+
+}
+
